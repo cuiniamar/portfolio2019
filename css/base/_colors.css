@@ -1,0 +1,272 @@
+/* ============================================================================================
+/** Colors
+=============================================================================================== */
+.bg-primary {
+  background: #222222 !important; }
+
+.text-primary {
+  color: #222222 !important; }
+
+.bg-primary--100 {
+  background: #3c3c3c !important; }
+
+.text-primary--100 {
+  color: #3c3c3c !important; }
+
+.bg-primary--200 {
+  background: #555555 !important; }
+
+.text-primary--200 {
+  color: #555555 !important; }
+
+.bg-primary--300 {
+  background: #6f6f6f !important; }
+
+.text-primary--300 {
+  color: #6f6f6f !important; }
+
+.bg-primary--400 {
+  background: #888888 !important; }
+
+.text-primary--400 {
+  color: #888888 !important; }
+
+.bg-primary--600 {
+  background: #151515 !important; }
+
+.text-primary--600 {
+  color: #151515 !important; }
+
+.bg-primary--700 {
+  background: #090909 !important; }
+
+.text-primary--700 {
+  color: #090909 !important; }
+
+.bg-primary--800 {
+  background: black !important; }
+
+.text-primary--800 {
+  color: black !important; }
+
+.bg-primary--900 {
+  background: black !important; }
+
+.text-primary--900 {
+  color: black !important; }
+
+.bg-secondary {
+  background: #ededed !important; }
+
+.text-secondary {
+  color: #ededed !important; }
+
+.bg-secondary--100 {
+  background: #3c3c3c !important; }
+
+.text-secondary--100 {
+  color: #3c3c3c !important; }
+
+.bg-secondary--200 {
+  background: #555555 !important; }
+
+.text-secondary--200 {
+  color: #555555 !important; }
+
+.bg-secondary--300 {
+  background: #6f6f6f !important; }
+
+.text-secondary--300 {
+  color: #6f6f6f !important; }
+
+.bg-secondary--400 {
+  background: #888888 !important; }
+
+.text-secondary--400 {
+  color: #888888 !important; }
+
+.bg-secondary--600 {
+  background: #151515 !important; }
+
+.text-secondary--600 {
+  color: #151515 !important; }
+
+.bg-secondary--700 {
+  background: #090909 !important; }
+
+.text-secondary--700 {
+  color: #090909 !important; }
+
+.bg-secondary--800 {
+  background: black !important; }
+
+.text-secondary--800 {
+  color: black !important; }
+
+.bg-secondary--900 {
+  background: black !important; }
+
+.text-secondary--900 {
+  color: black !important; }
+
+.bg-contrast {
+  background: #fff !important; }
+
+.text-contrast {
+  color: #fff !important; }
+
+.bg-contrast--100 {
+  background: #3c3c3c !important; }
+
+.text-contrast--100 {
+  color: #3c3c3c !important; }
+
+.bg-contrast--200 {
+  background: #555555 !important; }
+
+.text-contrast--200 {
+  color: #555555 !important; }
+
+.bg-contrast--300 {
+  background: #6f6f6f !important; }
+
+.text-contrast--300 {
+  color: #6f6f6f !important; }
+
+.bg-contrast--400 {
+  background: #888888 !important; }
+
+.text-contrast--400 {
+  color: #888888 !important; }
+
+.bg-contrast--600 {
+  background: #151515 !important; }
+
+.text-contrast--600 {
+  color: #151515 !important; }
+
+.bg-contrast--700 {
+  background: #090909 !important; }
+
+.text-contrast--700 {
+  color: #090909 !important; }
+
+.bg-contrast--800 {
+  background: black !important; }
+
+.text-contrast--800 {
+  color: black !important; }
+
+.bg-contrast--900 {
+  background: black !important; }
+
+.text-contrast--900 {
+  color: black !important; }
+
+.bg-variant-primary {
+  background: #000 !important; }
+
+.text-variant-primary {
+  color: #000 !important; }
+
+.bg-variant-primary--100 {
+  background: #3c3c3c !important; }
+
+.text-variant-primary--100 {
+  color: #3c3c3c !important; }
+
+.bg-variant-primary--200 {
+  background: #555555 !important; }
+
+.text-variant-primary--200 {
+  color: #555555 !important; }
+
+.bg-variant-primary--300 {
+  background: #6f6f6f !important; }
+
+.text-variant-primary--300 {
+  color: #6f6f6f !important; }
+
+.bg-variant-primary--400 {
+  background: #888888 !important; }
+
+.text-variant-primary--400 {
+  color: #888888 !important; }
+
+.bg-variant-primary--600 {
+  background: #151515 !important; }
+
+.text-variant-primary--600 {
+  color: #151515 !important; }
+
+.bg-variant-primary--700 {
+  background: #090909 !important; }
+
+.text-variant-primary--700 {
+  color: #090909 !important; }
+
+.bg-variant-primary--800 {
+  background: black !important; }
+
+.text-variant-primary--800 {
+  color: black !important; }
+
+.bg-variant-primary--900 {
+  background: black !important; }
+
+.text-variant-primary--900 {
+  color: black !important; }
+
+.bg-variant-secondary {
+  background: #fff !important; }
+
+.text-variant-secondary {
+  color: #fff !important; }
+
+.bg-variant-secondary--100 {
+  background: #3c3c3c !important; }
+
+.text-variant-secondary--100 {
+  color: #3c3c3c !important; }
+
+.bg-variant-secondary--200 {
+  background: #555555 !important; }
+
+.text-variant-secondary--200 {
+  color: #555555 !important; }
+
+.bg-variant-secondary--300 {
+  background: #6f6f6f !important; }
+
+.text-variant-secondary--300 {
+  color: #6f6f6f !important; }
+
+.bg-variant-secondary--400 {
+  background: #888888 !important; }
+
+.text-variant-secondary--400 {
+  color: #888888 !important; }
+
+.bg-variant-secondary--600 {
+  background: #151515 !important; }
+
+.text-variant-secondary--600 {
+  color: #151515 !important; }
+
+.bg-variant-secondary--700 {
+  background: #090909 !important; }
+
+.text-variant-secondary--700 {
+  color: #090909 !important; }
+
+.bg-variant-secondary--800 {
+  background: black !important; }
+
+.text-variant-secondary--800 {
+  color: black !important; }
+
+.bg-variant-secondary--900 {
+  background: black !important; }
+
+.text-variant-secondary--900 {
+  color: black !important; }

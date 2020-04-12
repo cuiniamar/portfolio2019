@@ -1,0 +1,90 @@
+/* ============================================================================================
+/** About Style
+=============================================================================================== */
+
+.about {
+  background: $white;
+  margin: 2em 0;
+  padding: 3em 0;
+
+  @include tabletUp {
+    padding: 3em;
+  }
+
+  @include desktopUp {
+    margin: 4em;
+    padding: 4em;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+
+    @include desktopUp {
+      text-align: left;
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1em 0;
+
+    @include desktopUp {
+      text-align: left;
+    }
+  }
+
+  &__img-container {
+    display: none;
+    
+    @include tabletUp {
+      display: block;
+    }
+  }
+
+  &__qoute-container {
+    display: none;
+
+    @include tabletUp {
+      background: $black;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 3em;
+    }
+
+    @include desktopUp {
+      padding: 0.5em;
+    }
+  }
+
+  &__icon {
+    @include tabletUp {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    @include desktopUp {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__qoute {
+    @include tabletUp {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-top: 0.5em;
+      font-family: $font-secondary;
+      font-size: 1.2rem;
+    }
+
+    @include desktopUp {
+      font-size: 0.8rem;
+    }
+  }
+}

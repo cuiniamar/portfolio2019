@@ -1,0 +1,114 @@
+/* ============================================================================================
+/** Colors
+=============================================================================================== */
+
+$primary-color: #222222 !default;
+$secondary-color: #ededed !default;
+$contrast-color: #fff !default;
+$variant-primary-color: #000 !default;
+$variant-secondary-color: #fff !default;
+
+$primary: (
+  "base": $primary-color,
+  "100": lighten($primary-color, 10%),
+  "200": lighten($primary-color, 20%),
+  "300": lighten($primary-color, 30%),
+  "400": lighten($primary-color, 40%),
+  "600": darken($primary-color, 5%),
+  "700": darken($primary-color, 10%),
+  "800": darken($primary-color, 15%),
+  "900": darken($primary-color, 20%),
+);
+
+$secondary: (
+  "base": $secondary-color,
+  "100": lighten($primary-color, 10%),
+  "200": lighten($primary-color, 20%),
+  "300": lighten($primary-color, 30%),
+  "400": lighten($primary-color, 40%),
+  "600": darken($primary-color, 5%),
+  "700": darken($primary-color, 10%),
+  "800": darken($primary-color, 15%),
+  "900": darken($primary-color, 20%),
+);
+
+$contrast: (
+  "base": $contrast-color,
+  "100": lighten($primary-color, 10%),
+  "200": lighten($primary-color, 20%),
+  "300": lighten($primary-color, 30%),
+  "400": lighten($primary-color, 40%),
+  "600": darken($primary-color, 5%),
+  "700": darken($primary-color, 10%),
+  "800": darken($primary-color, 15%),
+  "900": darken($primary-color, 20%),
+);
+
+$variant-primary: (
+  "base": $variant-primary-color,
+  "100": lighten($primary-color, 10%),
+  "200": lighten($primary-color, 20%),
+  "300": lighten($primary-color, 30%),
+  "400": lighten($primary-color, 40%),
+  "600": darken($primary-color, 5%),
+  "700": darken($primary-color, 10%),
+  "800": darken($primary-color, 15%),
+  "900": darken($primary-color, 20%),
+);
+
+$variant-secondary: (
+  "base": $variant-secondary-color,
+  "100": lighten($primary-color, 10%),
+  "200": lighten($primary-color, 20%),
+  "300": lighten($primary-color, 30%),
+  "400": lighten($primary-color, 40%),
+  "600": darken($primary-color, 5%),
+  "700": darken($primary-color, 10%),
+  "800": darken($primary-color, 15%),
+  "900": darken($primary-color, 20%),
+);
+
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "contrast": $contrast,
+  "variant-primary": $variant-primary,
+  "variant-secondary": $variant-secondary
+) !default;
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid repeating map-get($colors, ...)
+
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown `#{$color}` - `#{$type}` in $colors.";
+  @return null;
+}
+
+// Color Classes
+
+@each $color_name, $color in $colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" {
+      .bg-#{$color_name} {
+        background: $color_value !important;
+      }
+      .text-#{$color_name} {
+        color: $color_value !important;
+      }
+    }
+    @else if $color_name != "shades" {
+      .bg-#{$color_name}--#{$color_type} {
+        background: $color_value !important;
+      }
+      .text-#{$color_name}--#{$color_type} {
+        color: $color_value !important;
+      }
+    }
+  }
+}

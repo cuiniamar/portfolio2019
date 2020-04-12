@@ -1,0 +1,189 @@
+/* ============================================================================================
+/** Main Header Styles  
+=============================================================================================== */
+
+.main-header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  width: 100vw;
+  padding: 0 1.5em;
+  color: $color-primary;
+  z-index: 1;
+  transition: .4s ease-out;
+
+  @include tabletUp {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    width: 100vw;
+    padding: 0 3em;
+    color: $color-primary;
+    z-index: 1;
+    transition: .4s ease-out;
+  }
+
+  &__logo {
+    color: $black;
+    font-family: $font-secondary;
+    &:hover {
+      text-decoration: none;
+      color: $color-primary;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    padding: 26px 10px;
+    cursor: pointer;
+    z-index: 1;
+    display: block;
+
+    @include tabletUp {
+      position: relative;
+      padding: 26px 10px;
+      cursor: pointer;
+      z-index: 1;
+      display: none;
+    }
+  }
+
+  &__line {
+    display: block;
+    position: relative;
+    background: $color-primary;
+    height: 2px;
+    width: 20px;
+    border-radius: 4px;
+    animation: closedMid 0.8s backwards;
+    animation-direction: reverse;
+    &::before, &::after {
+      content:  '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 4px;
+      background: $color-primary;
+      transition: background .8s ease;
+    }
+    &::before {
+      transform: translateY(-5px);
+      animation: closedTop 0.8s backwards;
+      animation-direction: reverse;
+    }
+    &::after {
+      transform: translateY(5px);
+      animation: closedBtm 0.8s backwards;
+      animation-direction: reverse;
+    }
+
+    @include tabletUp {
+      display: block;
+      position: relative;
+      background: $color-primary;
+      height: 2px;
+      width: 20px;
+      border-radius: 4px;
+      &::before, &::after {
+        content:  '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        background: $color-primary;
+        transition: background .8s ease;
+      }
+      &::before {
+          transform: translateY(-5px);
+      }
+      &::after {
+          transform: translateY(5px);
+      }
+    }
+  }
+
+  &__trigger {
+    display: none;
+
+    @include tabletUp {
+      display: none;
+    }
+
+    &:checked ~ .nav-list {
+      opacity: 1;
+      clip-path: circle(100% at center);
+
+      .nav-list__item {
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity .4s ease-in-out, transform .6s cubic-bezier(0.175, 0.085, 0.32, 1.275);
+
+        &:nth-child(1) {
+          transition-delay: .6s;
+          margin-top: 20px;
+        }
+        &:nth-child(2) {
+          transition-delay: .7s;
+        }
+        &:nth-child(3) {
+          transition-delay: .8s;
+        }
+        &:nth-child(4) {
+          transition-delay: .9s;
+        }
+        &:nth-child(5) {
+          transition-delay: 1s;
+        }
+      }
+    }
+
+    &:checked ~ .main-header__icon {
+      border-radius: 50%;
+      animation: pulse 1s;
+
+      .main-header__line {
+        background: $white;
+        animation: openMid 0.8s forwards;
+        &::before {
+          background: white;
+          animation: openTop 0.8s forwards;
+        }
+        &::after {
+          background: white;
+          animation: openBtm 0.8s forwards;
+        }
+      }
+    }
+  }
+
+  &.is-scrolled {
+    height: 50px;
+    background: $color-primary;
+    color: white;
+
+    .main-header__icon {
+      background: white;
+    }
+
+    .main-header__line {
+      background: white;
+      &::before, &::after {
+        background: white;
+      }
+    }
+
+    .nav-list__item {
+      color: $white;
+    }
+
+    @include tabletUp {
+      height: 50px;
+      background: rgba(0, 0, 0, 0.9);
+      color: white;
+    }
+  }
+}

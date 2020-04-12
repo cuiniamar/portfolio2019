@@ -1,0 +1,80 @@
+/* ============================================================================================
+/** Contact Styles
+=============================================================================================== */
+
+.contact {
+  background-image: url('../../assets/images/contact/background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 3em 0;
+  margin-top: 2em;
+
+  @include desktopUp {
+    margin: 4em;
+    padding: 4em;
+  }
+
+  &__container {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1em;
+
+    @include tabletUp {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  &__title-container {
+    @include desktopUp {
+      background: $black;
+      height: 250px;
+      width: 350px;
+      clip-path: polygon(50% 55%, 0 0, 100% 0);
+      margin: -80px auto 0 auto;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+
+    @include desktopUp {
+      color: $white;
+      padding-top: 25px;
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+  }
+
+  &__content-container {
+    text-align: center;
+
+    @include desktopUp {
+      margin-top: -85px;
+    }
+  }
+
+  &__btn {
+    background: $black;
+    border: none;
+    border-radius: 0;
+    color: $white;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    &:hover {
+      color: $white;
+      background: $color-primary;
+    }
+  }
+
+  &__email {
+    color: $black;
+    &:hover {
+      color: $color-primary;
+      text-decoration: none;
+    }
+  }
+}

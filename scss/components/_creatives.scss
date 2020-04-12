@@ -1,0 +1,59 @@
+/* ============================================================================================
+/** Creativces Styles
+=============================================================================================== */
+
+.creatives {
+  background: $white;
+  margin: 2em 0;
+  padding: 3em 0;
+
+  @include desktopUp {
+    margin: 4em;
+    padding: 0;
+  }
+
+  @include widescreenUp {
+    margin: 4em 6em;
+  }
+
+  &__container1 {
+    text-align: center;
+
+    @include desktopUp {
+      text-align: left;
+      padding: 4em;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+
+    @include desktopUp {
+      color: $white;
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    margin: 1em 0;
+  }
+
+  &__container2 {
+    text-align: center;
+
+    @include tabletUp {
+      img {
+        width: 60%;
+      }
+    }
+
+    @include desktopUp {
+      text-align: left;
+      padding: 4em 2em; 
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

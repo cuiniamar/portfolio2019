@@ -1,0 +1,21 @@
+/* ============================================================================================
+/** Creatives List Style
+=============================================================================================== */
+
+.creatives-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0.8em;
+    background: none;
+    
+    @include desktopUp {
+      margin: 20px;
+    }
+  }
+}

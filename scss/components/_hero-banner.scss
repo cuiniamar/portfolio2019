@@ -1,0 +1,85 @@
+/* ============================================================================================
+/** Hero Banner Style
+=============================================================================================== */
+
+.hero-banner {
+  background-image: url('../assets/images/hero/mobile-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 45%;
+  background-color: $white;
+  padding-top: 4em;
+  padding-bottom: 2em;
+  text-align: center;
+
+  @include mobileUp {
+    background-size: 100% 50%;
+  }
+
+  @include tabletUp {
+    background-image: url('../assets/images/hero/hero-bg.png');
+    background-size: 100% 68%;
+  }
+
+  @include desktopUp {
+    background-size: 100% 70%;
+    padding-bottom: 4em;
+  }
+
+  @include widescreenUp {
+    background-size: 100% 95%;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    color: $black;
+    position: relative;
+    margin-bottom: 1.5em;
+    &::after {
+      content: '';
+      position: absolute;
+      border-bottom: 3px solid $color-secondary;
+      left: 50%;
+      bottom: -20px;
+      margin-left: -15px;
+      width: 30px;
+    }
+
+    @include mobileUp {
+      margin: 2em 0;
+    }
+
+    @include tabletUp {
+      margin-top: 10em;
+      color: darken($grey, 33%);
+      &::after {
+        border-color: $black;
+      }
+    }
+
+    @include widescreenUp {
+      margin-top: 14em;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    color: $black;
+
+    @include mobileUp {
+      margin-bottom: 3em;
+    }
+
+    @include tabletUp {
+      margin-bottom: 0.5em;
+      letter-spacing: 10px;
+    }
+  }
+
+  &__description {
+    @include desktopUp {
+      padding: 0 14em;
+    }
+  }
+}

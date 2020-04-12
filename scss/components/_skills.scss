@@ -1,0 +1,152 @@
+/* ============================================================================================
+/** Skills
+=============================================================================================== */
+
+.skills {
+  background: $color-primary;
+  margin: 2em 0;
+  padding: 3em 0;
+
+  @include desktopUp {
+    margin: 4em;
+    padding: 4em;
+  }
+  
+  &__title {
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+
+    @include desktopUp {
+      border-top: 1px solid $color-secondary;
+      position: relative;
+      top: 20px;
+    }
+  }
+
+  &__design-title,
+  &__dev-title {
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0.8em;
+
+    @include desktopUp {
+      margin: 1em 0;
+    }
+  }
+
+  &__design-title {
+    @include desktopUp {
+      text-align: right;
+    }
+  }
+
+  &__dev-title {
+    @include desktopUp {
+      text-align: left;
+    }
+  }
+
+  &__dev-label {
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+
+    @include tabletUp {
+      text-align: left;
+    }
+  }
+
+  &__chart-container {
+    font-size: 6em;
+  }
+
+  &__design-description {
+    color: $white;
+    text-align: center;
+    margin-top: 0.8em;
+  }
+
+  &__pie-chart {
+    height: 1em;
+    width: 1em;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__pie {
+    height: 100%;
+    width: 100%;
+    clip: rect(0, 1em, 1em, 0.5em);
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &__pie-half {
+    height: 100%;
+    width: 100%;
+    border: 0.1em solid $white;
+    border-radius: 50%;
+    clip: rect(0, 0.5em, 1em, 0);
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &__pie-label {
+    background: $black;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 0.4em;
+    top: 0.4em;
+    left: 0.4em;
+    right: 0.4em;
+    color: $white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      color: $white;
+      font-size: 0.6rem;
+      margin-bottom: -17px;
+    }
+  }
+
+  &--progress-83,
+  &--progress-87,
+  &--progress-75,
+  &--progress-48 {
+    .skills__pie {
+      clip: rect(auto, auto, auto, auto);
+    }
+  }
+
+  &--progress-83 {
+    .skills__pie-half--right {
+      transform: rotate(240deg);
+    }
+  }
+
+  &--progress-87 {
+    .skills__pie-half--right {
+      transform: rotate(227deg);
+    }
+  }
+
+  &--progress-75 {
+    .skills__pie-half--right {
+      transform: rotate(270deg);
+    }
+  }
+
+  &--progress-48 {
+    .skills__pie-half--right {
+      transform: rotate(372deg);
+    }
+  }
+}

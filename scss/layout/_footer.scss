@@ -1,0 +1,17 @@
+/* ============================================================================================
+/** Footer Styles
+=============================================================================================== */
+
+.footer {
+  background: $black;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+
+  &__copyrights {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    color: $white;
+    font-family: $font-secondary;
+    text-align: center;
+  }
+}

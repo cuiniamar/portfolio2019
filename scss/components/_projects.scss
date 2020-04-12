@@ -1,0 +1,74 @@
+/* ============================================================================================
+/** Projects Styles
+=============================================================================================== */
+
+.projects {
+  background: $white;
+  margin: 2em 0;
+  padding: 3em 0;
+  text-align: center;
+
+  @include desktopUp {
+    margin: 4em;
+    padding: 4em;
+  }
+
+  @include widescreenUp {
+    margin: 4em 6em;
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    margin: 1em 0;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1em;
+  }
+
+  &__item {
+    background: $grey;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    &:nth-child(1) {
+      background: $balboa;
+    }
+    &:nth-child(2) {
+      background: $authorhouse;
+    }
+    &:nth-child(3) {
+      background: $xlibris;
+    }
+    &:nth-child(4) {
+      background: $westbow;
+    }
+    &:nth-child(5) {
+      background: $iuniverse;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

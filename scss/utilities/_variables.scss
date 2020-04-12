@@ -1,0 +1,41 @@
+// ============================================================================
+// Site defaults
+// ============================================================================
+
+// Base font size
+// this will affect all 'rem' and 'em' based units
+// need to be declared in root 'html'
+$base-font: 16px !default;
+$font-size-base: $base-font !default;
+
+//Font Family
+$font-primary: 'Playfair Display', serif !default;
+$font-secondary: 'Source Sans Pro', sans-serif !default;
+
+// Breakpoints - to be used as mixins
+// less than 480px is default style, mobile-first approach
+$mobileUp: '(min-width: 576px)' !default;
+$tabletUp: '(min-width: 768px)' !default;
+$desktopUp: '(min-width: 992px)' !default;
+$widescreenUp: '(min-width: 1200px)' !default;
+$bigwidescreenUp: '(min-width: 1440px)' !default;
+
+
+// Basic Default Color Pallete
+$white: #ffffff;
+$black: #000000;
+$grey: #ededed;
+
+// Initial Colors
+$color-primary: #222222 !default;
+$color-secondary: $grey !default;
+$color-contrast: $white !default;
+
+// Special Colors
+$balboa: #26202a;
+$authorhouse: #181e36;
+$xlibris: #363739;
+$westbow: #485067;
+$iuniverse: #67b3d3;
+
+// Button Colors
